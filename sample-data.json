@@ -1,0 +1,1345 @@
+{
+  "users": [
+    {
+      "_id": "69cee6b3453de7264689099e",
+      "name": "Teacher (seed)",
+      "identifier": "admin01",
+      "role": "teacher",
+      "isActive": true,
+      "createdAt": "2026-04-02T21:59:15.676Z",
+      "updatedAt": "2026-04-02T21:59:15.676Z"
+    },
+    {
+      "_id": "69cee6b3453de726468909a0",
+      "name": "Teacher User",
+      "identifier": "teacher01",
+      "role": "teacher",
+      "isActive": true,
+      "createdAt": "2026-04-02T21:59:15.739Z",
+      "updatedAt": "2026-04-02T21:59:15.739Z"
+    },
+    {
+      "_id": "69cee6b3453de726468909a2",
+      "name": "Student User",
+      "identifier": "student01",
+      "role": "student",
+      "isActive": true,
+      "createdAt": "2026-04-02T21:59:15.806Z",
+      "updatedAt": "2026-04-02T21:59:15.806Z"
+    },
+    {
+      "_id": "69cee6b4453de726468909be",
+      "name": "Student Two",
+      "identifier": "student02",
+      "role": "student",
+      "isActive": true,
+      "createdAt": "2026-04-02T21:59:16.545Z",
+      "updatedAt": "2026-04-02T21:59:16.545Z"
+    },
+    {
+      "_id": "69cee75855b7415e459ac8c7",
+      "name": "Student Three",
+      "identifier": "student03",
+      "role": "student",
+      "isActive": true,
+      "createdAt": "2026-04-02T22:02:00.888Z",
+      "updatedAt": "2026-04-02T22:02:00.888Z"
+    },
+    {
+      "_id": "69cee75955b7415e459ac8ca",
+      "name": "Student Four",
+      "identifier": "student04",
+      "role": "student",
+      "isActive": true,
+      "createdAt": "2026-04-02T22:02:01.278Z",
+      "updatedAt": "2026-04-02T22:02:01.278Z"
+    },
+    {
+      "_id": "69cee75955b7415e459ac8cd",
+      "name": "Student Five",
+      "identifier": "student05",
+      "role": "student",
+      "isActive": true,
+      "createdAt": "2026-04-02T22:02:01.661Z",
+      "updatedAt": "2026-04-02T22:02:01.661Z"
+    },
+    {
+      "_id": "69cee75a55b7415e459ac8d0",
+      "name": "Teacher Two",
+      "identifier": "teacher02",
+      "role": "teacher",
+      "isActive": true,
+      "createdAt": "2026-04-02T22:02:02.055Z",
+      "updatedAt": "2026-04-02T22:02:02.055Z"
+    }
+  ],
+  "quizzes": [
+    {
+      "_id": "69cee6b3453de726468909a4",
+      "title": "Data Structures Midterm",
+      "description": "Midterm quiz for CSE4165",
+      "timeLimit": 1800,
+      "rules": "No external resources. 1 attempt.",
+      "createdAt": "2026-04-02T21:59:15.863Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee6b3453de726468909a6",
+      "title": "Algorithms Quiz",
+      "description": "Weekly assessment",
+      "timeLimit": 900,
+      "rules": "Open book. 30 minutes.",
+      "createdAt": "2026-04-02T21:59:15.920Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75a55b7415e459ac8d3",
+      "title": "Sample Quiz 3",
+      "description": "Auto-generated sample quiz",
+      "timeLimit": 600,
+      "rules": "Follow instructions.",
+      "createdAt": "2026-04-02T22:02:02.169Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75a55b7415e459ac8d5",
+      "title": "Sample Quiz 4",
+      "description": "Auto-generated sample quiz",
+      "timeLimit": 900,
+      "rules": "Follow instructions.",
+      "createdAt": "2026-04-02T22:02:02.225Z",
+      "__v": 0
+    }
+  ],
+  "questions": [
+    {
+      "_id": "69cee6b3453de726468909a8",
+      "quiz": "69cee6b3453de726468909a4",
+      "text": "What is the time complexity of binary search?",
+      "options": [
+        {
+          "text": "O(n)",
+          "_id": "69cee6b3453de726468909a9"
+        },
+        {
+          "text": "O(log n)",
+          "_id": "69cee6b3453de726468909aa"
+        },
+        {
+          "text": "O(n log n)",
+          "_id": "69cee6b3453de726468909ab"
+        }
+      ],
+      "correctIndex": 1,
+      "points": 2,
+      "__v": 0
+    },
+    {
+      "_id": "69cee6b4453de726468909ad",
+      "quiz": "69cee6b3453de726468909a4",
+      "text": "Which data structure uses LIFO?",
+      "options": [
+        {
+          "text": "Queue",
+          "_id": "69cee6b4453de726468909ae"
+        },
+        {
+          "text": "Stack",
+          "_id": "69cee6b4453de726468909af"
+        },
+        {
+          "text": "Tree",
+          "_id": "69cee6b4453de726468909b0"
+        }
+      ],
+      "correctIndex": 1,
+      "points": 1,
+      "__v": 0
+    },
+    {
+      "_id": "69cee6b4453de726468909b2",
+      "quiz": "69cee6b3453de726468909a6",
+      "text": "Dijkstra algorithm solves which problem?",
+      "options": [
+        {
+          "text": "Minimum spanning tree",
+          "_id": "69cee6b4453de726468909b3"
+        },
+        {
+          "text": "Shortest path from single source",
+          "_id": "69cee6b4453de726468909b4"
+        },
+        {
+          "text": "Topological sort",
+          "_id": "69cee6b4453de726468909b5"
+        }
+      ],
+      "correctIndex": 1,
+      "points": 2,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75a55b7415e459ac8d9",
+      "quiz": "69cee6b3453de726468909a4",
+      "text": "What does CPU stand for?",
+      "options": [
+        {
+          "text": "Central Processing Unit",
+          "_id": "69cee75a55b7415e459ac8da"
+        },
+        {
+          "text": "Computer Personal Unit",
+          "_id": "69cee75a55b7415e459ac8db"
+        },
+        {
+          "text": "Central Processor Unit",
+          "_id": "69cee75a55b7415e459ac8dc"
+        }
+      ],
+      "correctIndex": 0,
+      "points": 1,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75a55b7415e459ac8de",
+      "quiz": "69cee6b3453de726468909a4",
+      "text": "What is O(1)?",
+      "options": [
+        {
+          "text": "Constant time",
+          "_id": "69cee75a55b7415e459ac8df"
+        },
+        {
+          "text": "Linear time",
+          "_id": "69cee75a55b7415e459ac8e0"
+        },
+        {
+          "text": "Quadratic time",
+          "_id": "69cee75a55b7415e459ac8e1"
+        }
+      ],
+      "correctIndex": 0,
+      "points": 2,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75a55b7415e459ac8e3",
+      "quiz": "69cee6b3453de726468909a4",
+      "text": "Which is a NoSQL DB?",
+      "options": [
+        {
+          "text": "MongoDB",
+          "_id": "69cee75a55b7415e459ac8e4"
+        },
+        {
+          "text": "Postgres",
+          "_id": "69cee75a55b7415e459ac8e5"
+        },
+        {
+          "text": "MySQL",
+          "_id": "69cee75a55b7415e459ac8e6"
+        }
+      ],
+      "correctIndex": 0,
+      "points": 1,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75a55b7415e459ac8e8",
+      "quiz": "69cee6b3453de726468909a4",
+      "text": "Which sort is stable?",
+      "options": [
+        {
+          "text": "Quick sort",
+          "_id": "69cee75a55b7415e459ac8e9"
+        },
+        {
+          "text": "Merge sort",
+          "_id": "69cee75a55b7415e459ac8ea"
+        },
+        {
+          "text": "Heap sort",
+          "_id": "69cee75a55b7415e459ac8eb"
+        }
+      ],
+      "correctIndex": 1,
+      "points": 2,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75a55b7415e459ac8ed",
+      "quiz": "69cee6b3453de726468909a4",
+      "text": "Pick the LIFO structure",
+      "options": [
+        {
+          "text": "Queue",
+          "_id": "69cee75a55b7415e459ac8ee"
+        },
+        {
+          "text": "Stack",
+          "_id": "69cee75a55b7415e459ac8ef"
+        },
+        {
+          "text": "Graph",
+          "_id": "69cee75a55b7415e459ac8f0"
+        }
+      ],
+      "correctIndex": 1,
+      "points": 1,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75a55b7415e459ac8f3",
+      "quiz": "69cee6b3453de726468909a6",
+      "text": "What does CPU stand for?",
+      "options": [
+        {
+          "text": "Central Processing Unit",
+          "_id": "69cee75a55b7415e459ac8f4"
+        },
+        {
+          "text": "Computer Personal Unit",
+          "_id": "69cee75a55b7415e459ac8f5"
+        },
+        {
+          "text": "Central Processor Unit",
+          "_id": "69cee75a55b7415e459ac8f6"
+        }
+      ],
+      "correctIndex": 0,
+      "points": 1,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75a55b7415e459ac8f8",
+      "quiz": "69cee6b3453de726468909a6",
+      "text": "What is O(1)?",
+      "options": [
+        {
+          "text": "Constant time",
+          "_id": "69cee75a55b7415e459ac8f9"
+        },
+        {
+          "text": "Linear time",
+          "_id": "69cee75a55b7415e459ac8fa"
+        },
+        {
+          "text": "Quadratic time",
+          "_id": "69cee75a55b7415e459ac8fb"
+        }
+      ],
+      "correctIndex": 0,
+      "points": 2,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75a55b7415e459ac8fd",
+      "quiz": "69cee6b3453de726468909a6",
+      "text": "Which is a NoSQL DB?",
+      "options": [
+        {
+          "text": "MongoDB",
+          "_id": "69cee75a55b7415e459ac8fe"
+        },
+        {
+          "text": "Postgres",
+          "_id": "69cee75a55b7415e459ac8ff"
+        },
+        {
+          "text": "MySQL",
+          "_id": "69cee75a55b7415e459ac900"
+        }
+      ],
+      "correctIndex": 0,
+      "points": 1,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75a55b7415e459ac902",
+      "quiz": "69cee6b3453de726468909a6",
+      "text": "Which sort is stable?",
+      "options": [
+        {
+          "text": "Quick sort",
+          "_id": "69cee75a55b7415e459ac903"
+        },
+        {
+          "text": "Merge sort",
+          "_id": "69cee75a55b7415e459ac904"
+        },
+        {
+          "text": "Heap sort",
+          "_id": "69cee75a55b7415e459ac905"
+        }
+      ],
+      "correctIndex": 1,
+      "points": 2,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75a55b7415e459ac907",
+      "quiz": "69cee6b3453de726468909a6",
+      "text": "Pick the LIFO structure",
+      "options": [
+        {
+          "text": "Queue",
+          "_id": "69cee75a55b7415e459ac908"
+        },
+        {
+          "text": "Stack",
+          "_id": "69cee75a55b7415e459ac909"
+        },
+        {
+          "text": "Graph",
+          "_id": "69cee75a55b7415e459ac90a"
+        }
+      ],
+      "correctIndex": 1,
+      "points": 1,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75b55b7415e459ac90d",
+      "quiz": "69cee75a55b7415e459ac8d3",
+      "text": "What does CPU stand for?",
+      "options": [
+        {
+          "text": "Central Processing Unit",
+          "_id": "69cee75b55b7415e459ac90e"
+        },
+        {
+          "text": "Computer Personal Unit",
+          "_id": "69cee75b55b7415e459ac90f"
+        },
+        {
+          "text": "Central Processor Unit",
+          "_id": "69cee75b55b7415e459ac910"
+        }
+      ],
+      "correctIndex": 0,
+      "points": 1,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75b55b7415e459ac912",
+      "quiz": "69cee75a55b7415e459ac8d3",
+      "text": "What is O(1)?",
+      "options": [
+        {
+          "text": "Constant time",
+          "_id": "69cee75b55b7415e459ac913"
+        },
+        {
+          "text": "Linear time",
+          "_id": "69cee75b55b7415e459ac914"
+        },
+        {
+          "text": "Quadratic time",
+          "_id": "69cee75b55b7415e459ac915"
+        }
+      ],
+      "correctIndex": 0,
+      "points": 2,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75b55b7415e459ac917",
+      "quiz": "69cee75a55b7415e459ac8d3",
+      "text": "Which is a NoSQL DB?",
+      "options": [
+        {
+          "text": "MongoDB",
+          "_id": "69cee75b55b7415e459ac918"
+        },
+        {
+          "text": "Postgres",
+          "_id": "69cee75b55b7415e459ac919"
+        },
+        {
+          "text": "MySQL",
+          "_id": "69cee75b55b7415e459ac91a"
+        }
+      ],
+      "correctIndex": 0,
+      "points": 1,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75b55b7415e459ac91c",
+      "quiz": "69cee75a55b7415e459ac8d3",
+      "text": "Which sort is stable?",
+      "options": [
+        {
+          "text": "Quick sort",
+          "_id": "69cee75b55b7415e459ac91d"
+        },
+        {
+          "text": "Merge sort",
+          "_id": "69cee75b55b7415e459ac91e"
+        },
+        {
+          "text": "Heap sort",
+          "_id": "69cee75b55b7415e459ac91f"
+        }
+      ],
+      "correctIndex": 1,
+      "points": 2,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75b55b7415e459ac921",
+      "quiz": "69cee75a55b7415e459ac8d3",
+      "text": "Pick the LIFO structure",
+      "options": [
+        {
+          "text": "Queue",
+          "_id": "69cee75b55b7415e459ac922"
+        },
+        {
+          "text": "Stack",
+          "_id": "69cee75b55b7415e459ac923"
+        },
+        {
+          "text": "Graph",
+          "_id": "69cee75b55b7415e459ac924"
+        }
+      ],
+      "correctIndex": 1,
+      "points": 1,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75b55b7415e459ac927",
+      "quiz": "69cee75a55b7415e459ac8d5",
+      "text": "What does CPU stand for?",
+      "options": [
+        {
+          "text": "Central Processing Unit",
+          "_id": "69cee75b55b7415e459ac928"
+        },
+        {
+          "text": "Computer Personal Unit",
+          "_id": "69cee75b55b7415e459ac929"
+        },
+        {
+          "text": "Central Processor Unit",
+          "_id": "69cee75b55b7415e459ac92a"
+        }
+      ],
+      "correctIndex": 0,
+      "points": 1,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75b55b7415e459ac92c",
+      "quiz": "69cee75a55b7415e459ac8d5",
+      "text": "What is O(1)?",
+      "options": [
+        {
+          "text": "Constant time",
+          "_id": "69cee75b55b7415e459ac92d"
+        },
+        {
+          "text": "Linear time",
+          "_id": "69cee75b55b7415e459ac92e"
+        },
+        {
+          "text": "Quadratic time",
+          "_id": "69cee75b55b7415e459ac92f"
+        }
+      ],
+      "correctIndex": 0,
+      "points": 2,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75b55b7415e459ac931",
+      "quiz": "69cee75a55b7415e459ac8d5",
+      "text": "Which is a NoSQL DB?",
+      "options": [
+        {
+          "text": "MongoDB",
+          "_id": "69cee75b55b7415e459ac932"
+        },
+        {
+          "text": "Postgres",
+          "_id": "69cee75b55b7415e459ac933"
+        },
+        {
+          "text": "MySQL",
+          "_id": "69cee75b55b7415e459ac934"
+        }
+      ],
+      "correctIndex": 0,
+      "points": 1,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75b55b7415e459ac936",
+      "quiz": "69cee75a55b7415e459ac8d5",
+      "text": "Which sort is stable?",
+      "options": [
+        {
+          "text": "Quick sort",
+          "_id": "69cee75b55b7415e459ac937"
+        },
+        {
+          "text": "Merge sort",
+          "_id": "69cee75b55b7415e459ac938"
+        },
+        {
+          "text": "Heap sort",
+          "_id": "69cee75b55b7415e459ac939"
+        }
+      ],
+      "correctIndex": 1,
+      "points": 2,
+      "__v": 0
+    },
+    {
+      "_id": "69cee75b55b7415e459ac93b",
+      "quiz": "69cee75a55b7415e459ac8d5",
+      "text": "Pick the LIFO structure",
+      "options": [
+        {
+          "text": "Queue",
+          "_id": "69cee75b55b7415e459ac93c"
+        },
+        {
+          "text": "Stack",
+          "_id": "69cee75b55b7415e459ac93d"
+        },
+        {
+          "text": "Graph",
+          "_id": "69cee75b55b7415e459ac93e"
+        }
+      ],
+      "correctIndex": 1,
+      "points": 1,
+      "__v": 0
+    }
+  ],
+  "results": [
+    {
+      "_id": "69cee6b4453de726468909b7",
+      "user": "69cee6b3453de726468909a2",
+      "quiz": "69cee6b3453de726468909a4",
+      "score": 3,
+      "total": 3,
+      "answers": [
+        {
+          "question": "69cee6b3453de726468909a8",
+          "answerIndex": 1,
+          "_id": "69cee6b4453de726468909b8"
+        },
+        {
+          "question": "69cee6b4453de726468909ad",
+          "answerIndex": 1,
+          "_id": "69cee6b4453de726468909b9"
+        }
+      ],
+      "takenAt": "2026-04-02T21:59:16.162Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee6b4453de726468909bb",
+      "user": "69cee6b3453de726468909a2",
+      "quiz": "69cee6b3453de726468909a6",
+      "score": 2,
+      "total": 2,
+      "answers": [
+        {
+          "question": "69cee6b4453de726468909b2",
+          "answerIndex": 1,
+          "_id": "69cee6b4453de726468909bc"
+        }
+      ],
+      "takenAt": "2026-04-02T21:59:16.220Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee6b4453de726468909c0",
+      "user": "69cee6b4453de726468909be",
+      "quiz": "69cee6b3453de726468909a4",
+      "score": 2,
+      "total": 3,
+      "answers": [
+        {
+          "question": "69cee6b3453de726468909a8",
+          "answerIndex": 0,
+          "_id": "69cee6b4453de726468909c1"
+        },
+        {
+          "question": "69cee6b4453de726468909ad",
+          "answerIndex": 1,
+          "_id": "69cee6b4453de726468909c2"
+        }
+      ],
+      "takenAt": "2026-04-02T21:59:16.602Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75c55b7415e459ac95b",
+      "user": "69cee75855b7415e459ac8c7",
+      "quiz": "69cee6b3453de726468909a4",
+      "score": 6,
+      "total": 10,
+      "answers": [
+        {
+          "question": "69cee6b3453de726468909a8",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac95c"
+        },
+        {
+          "question": "69cee6b4453de726468909ad",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac95d"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8d9",
+          "answerIndex": 0,
+          "_id": "69cee75c55b7415e459ac95e"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8de",
+          "answerIndex": 0,
+          "_id": "69cee75c55b7415e459ac95f"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8e3",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac960"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8e8",
+          "answerIndex": 0,
+          "_id": "69cee75c55b7415e459ac961"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8ed",
+          "answerIndex": 0,
+          "_id": "69cee75c55b7415e459ac962"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:04.071Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75c55b7415e459ac965",
+      "user": "69cee75955b7415e459ac8ca",
+      "quiz": "69cee6b3453de726468909a4",
+      "score": 3,
+      "total": 10,
+      "answers": [
+        {
+          "question": "69cee6b3453de726468909a8",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac966"
+        },
+        {
+          "question": "69cee6b4453de726468909ad",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac967"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8d9",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac968"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8de",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac969"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8e3",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac96a"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8e8",
+          "answerIndex": 0,
+          "_id": "69cee75c55b7415e459ac96b"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8ed",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac96c"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:04.182Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75c55b7415e459ac96f",
+      "user": "69cee75955b7415e459ac8cd",
+      "quiz": "69cee6b3453de726468909a4",
+      "score": 0,
+      "total": 10,
+      "answers": [
+        {
+          "question": "69cee6b3453de726468909a8",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac970"
+        },
+        {
+          "question": "69cee6b4453de726468909ad",
+          "answerIndex": 0,
+          "_id": "69cee75c55b7415e459ac971"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8d9",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac972"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8de",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac973"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8e3",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac974"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8e8",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac975"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8ed",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac976"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:04.300Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75c55b7415e459ac98d",
+      "user": "69cee6b4453de726468909be",
+      "quiz": "69cee6b3453de726468909a6",
+      "score": 5,
+      "total": 9,
+      "answers": [
+        {
+          "question": "69cee6b4453de726468909b2",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac98e"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8f3",
+          "answerIndex": 0,
+          "_id": "69cee75c55b7415e459ac98f"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8f8",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac990"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8fd",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac991"
+        },
+        {
+          "question": "69cee75a55b7415e459ac902",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac992"
+        },
+        {
+          "question": "69cee75a55b7415e459ac907",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac993"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:04.515Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75c55b7415e459ac996",
+      "user": "69cee75855b7415e459ac8c7",
+      "quiz": "69cee6b3453de726468909a6",
+      "score": 4,
+      "total": 9,
+      "answers": [
+        {
+          "question": "69cee6b4453de726468909b2",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac997"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8f3",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac998"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8f8",
+          "answerIndex": 0,
+          "_id": "69cee75c55b7415e459ac999"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8fd",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac99a"
+        },
+        {
+          "question": "69cee75a55b7415e459ac902",
+          "answerIndex": 0,
+          "_id": "69cee75c55b7415e459ac99b"
+        },
+        {
+          "question": "69cee75a55b7415e459ac907",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac99c"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:04.630Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75c55b7415e459ac99f",
+      "user": "69cee75955b7415e459ac8ca",
+      "quiz": "69cee6b3453de726468909a6",
+      "score": 3,
+      "total": 9,
+      "answers": [
+        {
+          "question": "69cee6b4453de726468909b2",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac9a0"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8f3",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac9a1"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8f8",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac9a2"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8fd",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac9a3"
+        },
+        {
+          "question": "69cee75a55b7415e459ac902",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac9a4"
+        },
+        {
+          "question": "69cee75a55b7415e459ac907",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac9a5"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:04.741Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75c55b7415e459ac9a8",
+      "user": "69cee75955b7415e459ac8cd",
+      "quiz": "69cee6b3453de726468909a6",
+      "score": 7,
+      "total": 9,
+      "answers": [
+        {
+          "question": "69cee6b4453de726468909b2",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac9a9"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8f3",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac9aa"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8f8",
+          "answerIndex": 0,
+          "_id": "69cee75c55b7415e459ac9ab"
+        },
+        {
+          "question": "69cee75a55b7415e459ac8fd",
+          "answerIndex": 0,
+          "_id": "69cee75c55b7415e459ac9ac"
+        },
+        {
+          "question": "69cee75a55b7415e459ac902",
+          "answerIndex": 1,
+          "_id": "69cee75c55b7415e459ac9ad"
+        },
+        {
+          "question": "69cee75a55b7415e459ac907",
+          "answerIndex": 2,
+          "_id": "69cee75c55b7415e459ac9ae"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:04.850Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75d55b7415e459ac9c1",
+      "user": "69cee6b3453de726468909a2",
+      "quiz": "69cee75a55b7415e459ac8d3",
+      "score": 5,
+      "total": 7,
+      "answers": [
+        {
+          "question": "69cee75b55b7415e459ac90d",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459ac9c2"
+        },
+        {
+          "question": "69cee75b55b7415e459ac912",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459ac9c3"
+        },
+        {
+          "question": "69cee75b55b7415e459ac917",
+          "answerIndex": 1,
+          "_id": "69cee75d55b7415e459ac9c4"
+        },
+        {
+          "question": "69cee75b55b7415e459ac91c",
+          "answerIndex": 1,
+          "_id": "69cee75d55b7415e459ac9c5"
+        },
+        {
+          "question": "69cee75b55b7415e459ac921",
+          "answerIndex": 1,
+          "_id": "69cee75d55b7415e459ac9c6"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:05.015Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75d55b7415e459ac9c9",
+      "user": "69cee6b4453de726468909be",
+      "quiz": "69cee75a55b7415e459ac8d3",
+      "score": 1,
+      "total": 7,
+      "answers": [
+        {
+          "question": "69cee75b55b7415e459ac90d",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459ac9ca"
+        },
+        {
+          "question": "69cee75b55b7415e459ac912",
+          "answerIndex": 1,
+          "_id": "69cee75d55b7415e459ac9cb"
+        },
+        {
+          "question": "69cee75b55b7415e459ac917",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459ac9cc"
+        },
+        {
+          "question": "69cee75b55b7415e459ac91c",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459ac9cd"
+        },
+        {
+          "question": "69cee75b55b7415e459ac921",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459ac9ce"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:05.126Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75d55b7415e459ac9d1",
+      "user": "69cee75855b7415e459ac8c7",
+      "quiz": "69cee75a55b7415e459ac8d3",
+      "score": 3,
+      "total": 7,
+      "answers": [
+        {
+          "question": "69cee75b55b7415e459ac90d",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459ac9d2"
+        },
+        {
+          "question": "69cee75b55b7415e459ac912",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459ac9d3"
+        },
+        {
+          "question": "69cee75b55b7415e459ac917",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459ac9d4"
+        },
+        {
+          "question": "69cee75b55b7415e459ac91c",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459ac9d5"
+        },
+        {
+          "question": "69cee75b55b7415e459ac921",
+          "answerIndex": 1,
+          "_id": "69cee75d55b7415e459ac9d6"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:05.237Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75d55b7415e459ac9d9",
+      "user": "69cee75955b7415e459ac8ca",
+      "quiz": "69cee75a55b7415e459ac8d3",
+      "score": 1,
+      "total": 7,
+      "answers": [
+        {
+          "question": "69cee75b55b7415e459ac90d",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459ac9da"
+        },
+        {
+          "question": "69cee75b55b7415e459ac912",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459ac9db"
+        },
+        {
+          "question": "69cee75b55b7415e459ac917",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459ac9dc"
+        },
+        {
+          "question": "69cee75b55b7415e459ac91c",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459ac9dd"
+        },
+        {
+          "question": "69cee75b55b7415e459ac921",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459ac9de"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:05.358Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75d55b7415e459ac9e1",
+      "user": "69cee75955b7415e459ac8cd",
+      "quiz": "69cee75a55b7415e459ac8d3",
+      "score": 4,
+      "total": 7,
+      "answers": [
+        {
+          "question": "69cee75b55b7415e459ac90d",
+          "answerIndex": 1,
+          "_id": "69cee75d55b7415e459ac9e2"
+        },
+        {
+          "question": "69cee75b55b7415e459ac912",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459ac9e3"
+        },
+        {
+          "question": "69cee75b55b7415e459ac917",
+          "answerIndex": 1,
+          "_id": "69cee75d55b7415e459ac9e4"
+        },
+        {
+          "question": "69cee75b55b7415e459ac91c",
+          "answerIndex": 1,
+          "_id": "69cee75d55b7415e459ac9e5"
+        },
+        {
+          "question": "69cee75b55b7415e459ac921",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459ac9e6"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:05.470Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75d55b7415e459ac9f9",
+      "user": "69cee6b3453de726468909a2",
+      "quiz": "69cee75a55b7415e459ac8d5",
+      "score": 0,
+      "total": 7,
+      "answers": [
+        {
+          "question": "69cee75b55b7415e459ac927",
+          "answerIndex": 1,
+          "_id": "69cee75d55b7415e459ac9fa"
+        },
+        {
+          "question": "69cee75b55b7415e459ac92c",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459ac9fb"
+        },
+        {
+          "question": "69cee75b55b7415e459ac931",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459ac9fc"
+        },
+        {
+          "question": "69cee75b55b7415e459ac936",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459ac9fd"
+        },
+        {
+          "question": "69cee75b55b7415e459ac93b",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459ac9fe"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:05.639Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75d55b7415e459aca01",
+      "user": "69cee6b4453de726468909be",
+      "quiz": "69cee75a55b7415e459ac8d5",
+      "score": 2,
+      "total": 7,
+      "answers": [
+        {
+          "question": "69cee75b55b7415e459ac927",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459aca02"
+        },
+        {
+          "question": "69cee75b55b7415e459ac92c",
+          "answerIndex": 1,
+          "_id": "69cee75d55b7415e459aca03"
+        },
+        {
+          "question": "69cee75b55b7415e459ac931",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459aca04"
+        },
+        {
+          "question": "69cee75b55b7415e459ac936",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459aca05"
+        },
+        {
+          "question": "69cee75b55b7415e459ac93b",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459aca06"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:05.749Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75d55b7415e459aca09",
+      "user": "69cee75855b7415e459ac8c7",
+      "quiz": "69cee75a55b7415e459ac8d5",
+      "score": 2,
+      "total": 7,
+      "answers": [
+        {
+          "question": "69cee75b55b7415e459ac927",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459aca0a"
+        },
+        {
+          "question": "69cee75b55b7415e459ac92c",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459aca0b"
+        },
+        {
+          "question": "69cee75b55b7415e459ac931",
+          "answerIndex": 1,
+          "_id": "69cee75d55b7415e459aca0c"
+        },
+        {
+          "question": "69cee75b55b7415e459ac936",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459aca0d"
+        },
+        {
+          "question": "69cee75b55b7415e459ac93b",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459aca0e"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:05.860Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75d55b7415e459aca11",
+      "user": "69cee75955b7415e459ac8ca",
+      "quiz": "69cee75a55b7415e459ac8d5",
+      "score": 1,
+      "total": 7,
+      "answers": [
+        {
+          "question": "69cee75b55b7415e459ac927",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459aca12"
+        },
+        {
+          "question": "69cee75b55b7415e459ac92c",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459aca13"
+        },
+        {
+          "question": "69cee75b55b7415e459ac931",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459aca14"
+        },
+        {
+          "question": "69cee75b55b7415e459ac936",
+          "answerIndex": 0,
+          "_id": "69cee75d55b7415e459aca15"
+        },
+        {
+          "question": "69cee75b55b7415e459ac93b",
+          "answerIndex": 2,
+          "_id": "69cee75d55b7415e459aca16"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:05.977Z",
+      "__v": 0
+    },
+    {
+      "_id": "69cee75e55b7415e459aca19",
+      "user": "69cee75955b7415e459ac8cd",
+      "quiz": "69cee75a55b7415e459ac8d5",
+      "score": 0,
+      "total": 7,
+      "answers": [
+        {
+          "question": "69cee75b55b7415e459ac927",
+          "answerIndex": 1,
+          "_id": "69cee75e55b7415e459aca1a"
+        },
+        {
+          "question": "69cee75b55b7415e459ac92c",
+          "answerIndex": 1,
+          "_id": "69cee75e55b7415e459aca1b"
+        },
+        {
+          "question": "69cee75b55b7415e459ac931",
+          "answerIndex": 1,
+          "_id": "69cee75e55b7415e459aca1c"
+        },
+        {
+          "question": "69cee75b55b7415e459ac936",
+          "answerIndex": 2,
+          "_id": "69cee75e55b7415e459aca1d"
+        },
+        {
+          "question": "69cee75b55b7415e459ac93b",
+          "answerIndex": 0,
+          "_id": "69cee75e55b7415e459aca1e"
+        }
+      ],
+      "takenAt": "2026-04-02T22:02:06.089Z",
+      "__v": 0
+    }
+  ],
+  "exportedAt": "2026-04-02T22:12:32.254Z"
+}
