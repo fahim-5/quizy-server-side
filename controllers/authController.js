@@ -2,7 +2,7 @@ import crypto from "crypto";
 import User from "../models/User.js";
 import PendingUser from "../models/PendingUser.js";
 import AppError from "../utils/appError.js";
-import { sendEmail } from "../utils/email.js";
+import sendEmail from "../utils/sendEmail.js";
 import verificationEmail from "../utils/emailTemplates/verificationTemplate.js";
 
 // Tokens removed for dev mode: endpoints return user data only
@@ -70,28 +70,48 @@ export const register = async (req, res, next) => {
       });
     }
 
-    // send email (best-effort). capture preview URL when available (Ethereal)
+    // send email (best-effort). capture preview URL or error info
     let preview;
-    try {
-      const sent = await sendEmail({
-        to: pending.email,
-        subject: "Verify your account",
-        text: `Your verification code is: ${code}`,
-        html: verificationEmail({
-          name: pending.name || pending.identifier,
-          code,
-          expiresMinutes: 15,
-        }),
-      });
-      preview = sent && sent.preview ? sent.preview : undefined;
-    } catch (e) {
-      console.warn("Failed to send verification email", e);
+    let emailError;
+    const sent = await sendEmail({
+      to: pending.email,
+      subject: "Verify your account",
+      text: `Your verification code is: ${code}`,
+      html: verificationEmail({
+        name: pending.name || pending.identifier,
+        code,
+        expiresMinutes: 15,
+      }),
+    });
+
+    if (sent) {
+      if (sent.error) {
+        // log server-side and keep moving
+        // eslint-disable-next-line no-console
+        console.warn(
+          "Failed to send verification email:",
+          sent.message || sent,
+        );
+        emailError = sent.message || "Failed to send email";
+      } else if (sent.preview) {
+        preview = sent.preview;
+      }
+    }
+
+    const responseData = { email: pending.email, preview };
+    // expose email error only for non-production debugging or when explicitly allowed
+    if (
+      emailError &&
+      (process.env.NODE_ENV !== "production" ||
+        process.env.SHOW_EMAIL_ERRORS === "true")
+    ) {
+      responseData.emailError = emailError;
     }
 
     res.status(201).json({
       success: true,
       message: "Verification code sent to email",
-      data: { email: pending.email, preview },
+      data: responseData,
     });
   } catch (error) {
     next(error);
@@ -159,26 +179,44 @@ export const resendVerification = async (req, res, next) => {
     await pending.save();
 
     let preview;
-    try {
-      const sent = await sendEmail({
-        to: pending.email,
-        subject: "Verify your account - code resent",
-        text: `Your verification code is: ${code}`,
-        html: verificationEmail({
-          name: pending.name || pending.identifier,
-          code,
-          expiresMinutes: 15,
-        }),
-      });
-      preview = sent && sent.preview ? sent.preview : undefined;
-    } catch (e) {
-      console.warn("Failed to send verification email", e);
+    let emailError;
+    const sent = await sendEmail({
+      to: pending.email,
+      subject: "Verify your account - code resent",
+      text: `Your verification code is: ${code}`,
+      html: verificationEmail({
+        name: pending.name || pending.identifier,
+        code,
+        expiresMinutes: 15,
+      }),
+    });
+
+    if (sent) {
+      if (sent.error) {
+        // eslint-disable-next-line no-console
+        console.warn(
+          "Failed to resend verification email:",
+          sent.message || sent,
+        );
+        emailError = sent.message || "Failed to send email";
+      } else if (sent.preview) {
+        preview = sent.preview;
+      }
+    }
+
+    const responseData = { email: pending.email, preview };
+    if (
+      emailError &&
+      (process.env.NODE_ENV !== "production" ||
+        process.env.SHOW_EMAIL_ERRORS === "true")
+    ) {
+      responseData.emailError = emailError;
     }
 
     res.status(200).json({
       success: true,
       message: "Verification code resent",
-      data: { email: pending.email, preview },
+      data: responseData,
     });
   } catch (err) {
     next(err);
@@ -204,29 +242,45 @@ export const requestPasswordReset = async (req, res, next) => {
     await user.save();
 
     let preview;
-    try {
-      const sent = await sendEmail({
-        to: user.email,
-        subject: "Password reset code",
-        text: `Your password reset code is: ${code}`,
-        html: verificationEmail({
-          name: user.name || user.identifier,
-          code,
-          expiresMinutes: 15,
-        }),
-      });
-      preview = sent && sent.preview ? sent.preview : undefined;
-    } catch (e) {
-      console.warn("Failed to send password reset email", e);
+    let emailError;
+    const sent = await sendEmail({
+      to: user.email,
+      subject: "Password reset code",
+      text: `Your password reset code is: ${code}`,
+      html: verificationEmail({
+        name: user.name || user.identifier,
+        code,
+        expiresMinutes: 15,
+      }),
+    });
+
+    if (sent) {
+      if (sent.error) {
+        // eslint-disable-next-line no-console
+        console.warn(
+          "Failed to send password reset email:",
+          sent.message || sent,
+        );
+        emailError = sent.message || "Failed to send email";
+      } else if (sent.preview) {
+        preview = sent.preview;
+      }
     }
 
-    res
-      .status(200)
-      .json({
-        success: true,
-        message: "Reset code sent",
-        data: { email: user.email, preview },
-      });
+    const responseData = { email: user.email, preview };
+    if (
+      emailError &&
+      (process.env.NODE_ENV !== "production" ||
+        process.env.SHOW_EMAIL_ERRORS === "true")
+    ) {
+      responseData.emailError = emailError;
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "Reset code sent",
+      data: responseData,
+    });
   } catch (err) {
     next(err);
   }

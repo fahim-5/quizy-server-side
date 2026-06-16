@@ -1,6 +1,6 @@
 import express from "express";
 import crypto from "crypto";
-import { sendEmail } from "../utils/email.js";
+import sendEmail from "../utils/sendEmail.js";
 import verificationEmail from "../utils/emailTemplates/verificationTemplate.js";
 
 const router = express.Router();
@@ -13,12 +13,10 @@ router.post("/send-test-email", async (req, res) => {
       process.env.NODE_ENV === "production" &&
       process.env.ALLOW_DEV_EMAILS !== "true"
     ) {
-      return res
-        .status(403)
-        .json({
-          success: false,
-          message: "Dev email endpoint disabled in production",
-        });
+      return res.status(403).json({
+        success: false,
+        message: "Dev email endpoint disabled in production",
+      });
     }
 
     const { email, name } = req.body;
@@ -36,21 +34,17 @@ router.post("/send-test-email", async (req, res) => {
       html: verificationEmail({ name: name || "", code, expiresMinutes: 15 }),
     });
 
-    return res
-      .status(200)
-      .json({
-        success: true,
-        message: "Test verification email sent",
-        data: { email },
-      });
+    return res.status(200).json({
+      success: true,
+      message: "Test verification email sent",
+      data: { email },
+    });
   } catch (err) {
     console.error("Dev send-test-email failed", err);
-    return res
-      .status(500)
-      .json({
-        success: false,
-        message: err.message || "Failed to send test email",
-      });
+    return res.status(500).json({
+      success: false,
+      message: err.message || "Failed to send test email",
+    });
   }
 });
 

@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-import { sendEmail } from "../utils/email.js";
+import sendEmail from "../utils/sendEmail.js";
 import verificationEmail from "../utils/emailTemplates/verificationTemplate.js";
 
 const args = process.argv.slice(2);
